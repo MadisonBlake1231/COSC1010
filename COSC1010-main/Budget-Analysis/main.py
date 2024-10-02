@@ -6,67 +6,22 @@
 #
 # Use comments liberally throughout the program. 
 
-while True:
-    month = 0 
-    total_real = 0
-    total_est = 0
-    
+MAX = 30 # The maximum number
 
-    # Rent Projected vs Rent Actual
-    print('Projected rent')
-    rent_p = float(input())
-    total_est += rent_p
-    print('Actual rent')
-    rent_a = float(input())
-    total_real += rent_a
+# Initialize an accumulator variable.
+total = 0.0
 
-    # Debt Projected vs Debt Actual
-    print('Projected debt')
-    debt_p = float(input())
-    total_est += debt_p
-    print('Actual debt')
-    debt_a = float(input())
-    total_real += debt_a
+# How much is the person have that they can spend for the month
 
-    # Gas Projected vs Gas Actual
-    print('Projected gas')
-    gas_p = float(input())
-    total_est += gas_p
-    print('Actual gas')
-    gas_a = float(input())
-    total_real += gas_a
 
-    # Food Projected vs Food Actual
-    print('Projected food')
-    food_p = float(input())
-    total_est += food_p
-    print('Actual food')
-    food_a = float(input())
-    total_real += food_a
+# Tracking the expense from every day of the month.
+print('This will calculate everything you spend in ' , end='')
+print(f'{MAX} days.')
 
-    # Insurance Projected vs Insurance Actual
-    print('Projected insurance')
-    insurance_p =float(input())
-    total_est += insurance_p
-    print('Actual insurance')
-    insurance_a = float(input())
-    total_real += insurance_a
+# Q3ORUHEGFSD
+for counter in range(MAX): 
+    number = int(input('Enter the total amount: '))
+    total = total + number 
 
-    # Utilities Projected vs Utilities Actual
-    print('Projected utilities')
-    utilities_p =float(input())
-    total_est += utilities_p
-    print('Actual utilities')
-    utilities_a = float(input())
-    total_real += utilities_a
-
-    if total_real > total_est:
-        #Over Budget
-        print('You are over budget by: ' ,total_real - total_est)
-    elif total_est > total_real:
-        #Under Budget
-        print('You are under budget by: ' , total_est - total_real)
-    else:
-        #Exact Budget
-        print('You are exactly on budget! You spent: ' , total_real)
-    print('---------- New Month -----------')
+# Display the total of the numbers.
+print(f'The total is {total}.')
