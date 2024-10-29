@@ -6,11 +6,13 @@
 #
 # Use comments liberally throughout the program. 
 
+
+
 def main():
     
     # Declare local variables
     contents = ''
-    numbers = [22, 14, -99]
+    numbers = ['numbers.txt']
     average = sum(numbers) / len(numbers)
     print(average) 
     
