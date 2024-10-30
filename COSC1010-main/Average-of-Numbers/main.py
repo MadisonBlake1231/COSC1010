@@ -6,24 +6,18 @@
 #
 # Use comments liberally throughout the program. 
 
+# Open file
+loop_count = 0
+total = 0 
+data = open("numbers.txt", "r")
 
+# Read data
+for line in data.readlines():
 
-def main():
-    
-    # Declare local variables
-    contents = ''
-    numbers = ['numbers.txt']
-    average = sum(numbers) / len(numbers)
-    print(average) 
-    
-    # Open the numbers.txt file for reading.
-    infile = open('numbers.txt', 'r')
-    
-    # Read and display the file's contents.
-    contents = infile.read()
+    # Calculate average
+    total = total + int(line)
+    loop_count += 1
+avg = total/loop_count
 
-    # Print contents
-    print(contents)
-
-# Call the main function
-main()
+# Display average
+print(avg)
